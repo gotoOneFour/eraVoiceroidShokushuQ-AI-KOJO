@@ -12,19 +12,19 @@
 		SELECTCASE FLAG:526
 		; 拘束・肉体操作系
 		CASE 0
-			
+
 		; 発情・感情操作系
 		CASE 1
-			
+
 		; 無意識・認識操作系
 		CASE 2
 			RETURN 0
 		ENDSELECT
 	ENDIF
-	
+
 	; 通常時
 	; 残り生命力(最大HP)で分岐
-	CSVBASE 8,0
+	CSVBASE 1,0
 	CSV_MAX_HP = RESULT
 	; 残り生命力66%以上
 	IF MAXBASE:0 > (CSV_MAX_HP / 100 * 66)
@@ -46,7 +46,7 @@
 			CALL KOJO_1_0_ADD_MESSAGE, @"（ま、まだ続けるの？）\n"
 			CALL KOJO_1_0_ADD_MESSAGE, @"（あったかい……）\n"
 		ENDSELECT
-		
+
 	; 残り生命力33%以上
 	ELSEIF MAXBASE:0 > (CSV_MAX_HP / 100 * 33)
 		SELECTCASE KOJO_1_KOJO_MODE
@@ -63,7 +63,7 @@
 			CALL KOJO_1_0_ADD_MESSAGE, @"（たすけて……　だれか……　だれか……）\n"
 			CALL KOJO_1_0_ADD_MESSAGE, @"（もうやだ……　もうやだ……　もうやだ……）\n"
 		ENDSELECT
-		
+
 	; 残り生命力0%以上
 	ELSE
 		SELECTCASE KOJO_1_KOJO_MODE
@@ -88,26 +88,26 @@ RETURN 1
 ; ◆ 052 ハウンド
 ; ※KOJO_1_0_RAND_MESSAGE以外の表示命令は禁止
 @KOJO_1_0_SYSTEM_MESSAGE_151_52(ARG:0, ARG:1, ARGS:0, ARGS:1, ARG:2, ARG:3, ARG:4, ARG:5, ARG:6)
-	
+
 	; 優先口上指定
 	CALL KOJO_1_0_SET_IMPORTANT_FLAG()
-	
+
 	; 催眠中
 	IF KOJO_1_0_IS_HYPNO()
 		; 催眠種類で分岐
 		SELECTCASE FLAG:526
 		; 拘束・肉体操作系
 		CASE 0
-			
+
 		; 発情・感情操作系
 		CASE 1
-			
+
 		; 無意識・認識操作系
 		CASE 2
 			RETURN 0
 		ENDSELECT
 	ENDIF
-	
+
 	; 通常時
 	SELECTCASE KOJO_1_KOJO_MODE
 	CASE "淫乱", "発情"
