@@ -5,27 +5,34 @@
 
 @KOJO_1_0_SYSTEM_MESSAGE_1_3(ARG:0, ARG:1, ARGS:0, ARGS:1, ARG:2, ARG:3, ARG:4, ARG:5, ARG:6)
 
+	SELECTCASE KOJO_1_KOJO_MODE
+	CASE "淫乱"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「ほーら、きちょうなよーちえんじのぷっくりしたからだがちかくにいますよ♥」\n"
+	CASE "発情"
+		CALL KOJO_1_0_ADD_MESSAGE, @"（あっ、しょくしゅさんをみてたらいつのまにかまえに……♥）\n"
+	ENDSELECT
+
 	; PTメンバーがいる
 	IF GET_MEMBER_SUM() > 1
 		SELECTCASE KOJO_1_KOJO_MODE
-		CASE "強気"
-			CALL KOJO_1_0_ADD_MESSAGE, @"「私が前に出ます！」\n"
-			CALL KOJO_1_0_ADD_MESSAGE, @"（安全な距離を保ったまま、少しでも近くに……）\n"
+		CASE "淫乱"
+
+		CASE "発情"
+
 		CASEELSE
-			CALL KOJO_1_0_ADD_MESSAGE, @"「なんとなく前に出たけど、これって囮役じゃないですかー！？」\n"
-			CALL KOJO_1_0_ADD_MESSAGE, @"「鬼さんこちらー　ほらほら、こっちですよー」\n"
+			CALL KOJO_1_0_ADD_MESSAGE, @"「ここはわたしがまえにでます！」\n"
+			CALL KOJO_1_0_ADD_MESSAGE, @"「せんぱいにまかせてください！」\n"
 		ENDSELECT
-		
+
 	; ひとりだよ
 	ELSE
 		SELECTCASE KOJO_1_KOJO_MODE
+		CASE "淫乱"
+			CALL KOJO_1_0_ADD_MESSAGE, @"「だれもみてないからすこしだけ……♥」\n"
 		CASE "発情"
-			CALL KOJO_1_0_ADD_MESSAGE, @"（とりあえず近付いたけど、軽率だったかも…）\n"
-		CASE "強気"
-			CALL KOJO_1_0_ADD_MESSAGE, @"「手っ取り早く済ませないと」\n"
-			CALL KOJO_1_0_ADD_MESSAGE, @"「攻撃は最大の防御です、手早くいきますよ！」\n"
+			CALL KOJO_1_0_ADD_MESSAGE, @"（う……　こんなにちかくにいたらきけんだけど……♥）\n"
 		CASEELSE
-			CALL KOJO_1_0_ADD_MESSAGE, @"「ちょっとでも攻撃を当てやすく…」\n"
+			CALL KOJO_1_0_ADD_MESSAGE, @"「いっきにたたいちゃうぞ！」\n"
 		ENDSELECT
 	ENDIF
 RETURN 1
