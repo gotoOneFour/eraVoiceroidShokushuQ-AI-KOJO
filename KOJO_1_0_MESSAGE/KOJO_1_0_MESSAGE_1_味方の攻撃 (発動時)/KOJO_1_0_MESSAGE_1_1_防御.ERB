@@ -8,16 +8,16 @@
 	SELECTCASE KOJO_1_KOJO_MODE
 	CASE "淫乱"
 		CALL KOJO_1_0_ADD_MESSAGE, @"「こわあい♥」\n"
-		CALL KOJO_1_0_ADD_MESSAGE, @"「アイちゃんはそんなにすぐにやられてあげませんよ♥」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「アイちゃんはそんなにすぐにやられてあげないよ♥」\n"
 	CASE "発情"
 		CALL KOJO_1_0_ADD_MESSAGE, @"（からだがあついよお……）\n"
-		CALL KOJO_1_0_ADD_MESSAGE, @"「いまはちょっとまずいです……♥」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「いまはちょっとまずいかも……♥」\n"
 ;	CASE "強気"
 ;		CALL KOJO_1_0_ADD_MESSAGE, @"\n"
 ;		CALL KOJO_1_0_ADD_MESSAGE, @"\n"
 	CASEELSE
 		CALL KOJO_1_0_ADD_MESSAGE, @"「ふええ……まもらなきゃ……」\n"
-		CALL KOJO_1_0_ADD_MESSAGE, @"「いたいのはにがてです……」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「いたいのやだあ……」\n"
 	ENDSELECT
 
 
@@ -47,7 +47,7 @@
 		CASE "淫乱"
 			CALL KOJO_1_0_ADD_MESSAGE, @"「このままじゃえっちされるまえにじめつしちゃうかな♥　がんばって♥」\n"
 		CASE "発情"
-			CALL KOJO_1_0_ADD_MESSAGE, @"「かららがあついし、いまはまもるべきですね……♥」\n"
+			CALL KOJO_1_0_ADD_MESSAGE, @"「かららがあついし、いまはまもるべきだね……♥」\n"
 ;		CASE "強気"
 ;			CALL KOJO_1_0_ADD_MESSAGE, @"\n"
 		CASEELSE
@@ -61,8 +61,6 @@
 			CALL KOJO_1_0_ADD_MESSAGE, @"「しょくしゅさんがげんきになってる……♥　こわい♥」\n"
 		CASE "発情"
 			CALL KOJO_1_0_ADD_MESSAGE, @"（まもってていいのかな……♥）\n"
-;		CASE "強気"
-;			CALL KOJO_1_0_ADD_MESSAGE, @"（こっちが身体を休めるより、相手の回復のが早いですね）\n"
 		CASEELSE
 			CALL KOJO_1_0_ADD_MESSAGE, @"（うねうねしてる……）\n"
 		ENDSELECT
@@ -74,11 +72,8 @@
 			CALL KOJO_1_0_ADD_MESSAGE, @"「きちゃう♥　しょくしゅさんがアイちゃんに♥」\n"
 		CASE "発情"
 			CALL KOJO_1_0_ADD_MESSAGE, @"（ちょっとやばそうかな……♥）\n"
-;		CASE "強気"
-;			CALL KOJO_1_0_ADD_MESSAGE, @"「相手が有利な場所で戦い続けるのは、良くないですね」\n"
-;			CALL KOJO_1_0_ADD_MESSAGE, @"（相手の縄張りで、じっと動かないのは悪手ですね）\n"
 		CASEELSE
-			CALL KOJO_1_0_ADD_MESSAGE, @"（うう……じりひんかもしれないです……）\n"
+			CALL KOJO_1_0_ADD_MESSAGE, @"（うう……じりひんかもしれないよぉ……）\n"
 		ENDSELECT
 	ENDSELECT
 
@@ -88,7 +83,7 @@
 	IF BASE:1 == MAXBASE:1
 		SELECTCASE KOJO_1_KOJO_MODE
 		CASE "淫乱"
-			CALL KOJO_1_0_ADD_MESSAGE, @"「ほらほら、げんきなえんじがここにいますよ♥」\n"
+			CALL KOJO_1_0_ADD_MESSAGE, @"「ほらほら、げんきなえんじがここにいるよぉ♥」\n"
 		CASE "発情"
 			CALL KOJO_1_0_ADD_MESSAGE, @"（なんとかうずうずをなおさないと……♥）\n"
 		CASEELSE
@@ -125,7 +120,7 @@
 		CASE "発情"
 			CALL KOJO_1_0_ADD_MESSAGE, @"（やばいやばい……このままじゃほんとうに♥）\n"
 		CASEELSE
-			CALL KOJO_1_0_ADD_MESSAGE, @"「もうこれいじょうはたえられません……」\n"
+			CALL KOJO_1_0_ADD_MESSAGE, @"「もうこれいじょうはむりぃ……」\n"
 		ENDSELECT
 	ENDIF
 RETURN 1
