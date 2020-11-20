@@ -8,14 +8,22 @@
 	; 汎用口上を読み込む
 	CALL KOJO_1_0_SYSTEM_MESSAGE_1_THROW_ATTACK(ARG:0, ARG:1, ARGS:0, ARGS:1, ARG:2, ARG:3, ARG:4, ARG:5, ARG:6)
 	CALL KOJO_1_0_FIX_MESSAGE
-	
-	; 2人以上のPTで行動中、他キャラが行動可能なら追加口上
-	IF GET_MEMBER_SUM() > 1 && ((TARGET != 1 && CHECK_FINE(TARGET)) || (FLAG:10 && FLAG:10 != TARGET && CHECK_FINE(FLAG:10)) || (FLAG:11 && FLAG:11 != TARGET && CHECK_FINE(FLAG:11)))
-		SELECTCASE KOJO_1_KOJO_MODE
-		CASEELSE
-			CALL KOJO_1_0_ADD_MESSAGE, @"「牽制はまかせて！　離れて攻撃できるうちは強気にいきますよ！」\n"
-		ENDSELECT
-	ENDIF
+
+	SELECTCASE KOJO_1_KOJO_MODE
+	CASE "淫乱"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「こんなによわいとおこらせちゃうだけかな……♥」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「ほーら♥　かよわいよーちえんじだよぉ♥」\n"
+
+	CASE "発情"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「ふええ……　あんまりねらいがつけれない……♥」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「うー……♥」\n"
+
+	CASEELSE
+		CALL KOJO_1_0_ADD_MESSAGE, @"「てきのうごきをよくみて……」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「あてなくちゃどうしようもないよね？」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「あたれー！」\n"
+	ENDSELECT
+
 RETURN 1
 
 
@@ -24,6 +32,19 @@ RETURN 1
 	; 汎用口上を読み込む
 	CALL KOJO_1_0_SYSTEM_MESSAGE_1_THROW_ATTACK(ARG:0, ARG:1, ARGS:0, ARGS:1, ARG:2, ARG:3, ARG:4, ARG:5, ARG:6)
 	CALL KOJO_1_0_FIX_MESSAGE
+
+	SELECTCASE KOJO_1_KOJO_MODE
+	CASE "淫乱"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「えい♥　えい♥」\n"
+	CASE "発情"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「このぐらいで……っ♥」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「あんまりしゅーちゅーできない……♥」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「うー……♥」\n"
+	CASEELSE
+		CALL KOJO_1_0_ADD_MESSAGE, @"「りらっくすしてー……　えいっ！」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「あたっく！」\n"
+	ENDSELECT
+
 RETURN RESULT
 
 
@@ -32,15 +53,30 @@ RETURN RESULT
 	; 汎用口上を読み込む
 	CALL KOJO_1_0_SYSTEM_MESSAGE_1_THROW_ATTACK(ARG:0, ARG:1, ARGS:0, ARGS:1, ARG:2, ARG:3, ARG:4, ARG:5, ARG:6)
 	CALL KOJO_1_0_FIX_MESSAGE
+	SELECTCASE KOJO_1_KOJO_MODE
+	CASE "淫乱"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「たくさんうって……♥」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「たおさなきゃ♥　たおさなきゃなのに♥」\n"
+
+	CASE "発情"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「たくさん……っ♥」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「はやくしないと……♥」\n"
+
+	CASEELSE
+		CALL KOJO_1_0_ADD_MESSAGE, @"「ここはいっきにうって……」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「めたらやったらでもあたればよかろうなのだー！」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「くらえー！」\n"
+	ENDSELECT
+
 RETURN RESULT
 
 
 ; □ 23 消耗武器攻撃 節約攻撃
 @KOJO_1_0_SYSTEM_MESSAGE_1_23(ARG:0, ARG:1, ARGS:0, ARGS:1, ARG:2, ARG:3, ARG:4, ARG:5, ARG:6)
-	
+
 	SELECTCASE KOJO_1_KOJO_MODE
 	CASEELSE
-		CALL KOJO_1_0_ADD_MESSAGE, @"「無くならないよう、大事に扱わないとねー」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「せつやくはだいじ……」\n"
 	ENDSELECT
 RETURN 1
 
@@ -50,7 +86,7 @@ RETURN 1
 
 	SELECTCASE KOJO_1_KOJO_MODE
 	CASEELSE
-		CALL KOJO_1_0_ADD_MESSAGE, @"「きりたん砲、全門連続発射ー！」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「おりゃりゃりゃりゃー！」\n"
 	ENDSELECT
 RETURN 1
 
@@ -60,24 +96,34 @@ RETURN 1
 
 	SELECTCASE KOJO_1_KOJO_MODE
 	CASEELSE
-		CALL KOJO_1_0_ADD_MESSAGE, @"「そこだぁっ！」\n"
-		CALL KOJO_1_0_ADD_MESSAGE, @"「こんだけじっくり狙えば、けっこう効くでしょう」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「じゃくてんにー、たたきこむ！」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「いってんとっぱ！」\n"
 	ENDSELECT
 RETURN 1
 
 
 ; □ XX 消耗武器攻撃 汎用口上
 @KOJO_1_0_SYSTEM_MESSAGE_1_THROW_ATTACK(ARG:0, ARG:1, ARGS:0, ARGS:1, ARG:2, ARG:3, ARG:4, ARG:5, ARG:6)
-	
+
 	; 汎用攻撃口上を読み込む
 	CALL KOJO_1_0_SYSTEM_MESSAGE_1_VERSATILE_ATTACK(ARG:0, ARG:1, ARGS:0, ARGS:1, ARG:2, ARG:3, ARG:4, ARG:5, ARG:6)
 	CALL KOJO_1_0_FIX_MESSAGE
-	
+
 	; 基本口上
 	SELECTCASE KOJO_1_KOJO_MODE
+	CASE "淫乱"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「たおさなくちゃなのに……♥」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「しょくしゅさん……♥　うねうねしてる……♥」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「うねうね……♥　きもちよさそう……♥」\n"
+	CASE "発情"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「あんまりしゅーちゅーできない……♥」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「ちゃんと……♥　ねらわなきゃ……♥」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「んっ♥」\n"
 	CASEELSE
-		CALL KOJO_1_0_ADD_MESSAGE, @"「どんな武器でも直接殴りかかるよりはマシですねぇ」\n"
-		CALL KOJO_1_0_ADD_MESSAGE, @"「やっぱり遠くからぺしぺしする方が性に合います\n　攻撃の届かない高台とかから一方的に撃てれば一番いいんですけど」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「これならわたしのちからでもあるていど……」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「たまぎれがこわいけど……」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「こっちこないでー！」\n"
+
 	ENDSELECT
 
 	; 武器別追加口上
@@ -86,9 +132,7 @@ RETURN 1
 	CASE 3
 		SELECTCASE KOJO_1_KOJO_MODE
 		CASEELSE
-			CALL KOJO_1_0_ADD_MESSAGE, @"「もっと燃えるがいいや！」\n"
-			CALL KOJO_1_0_ADD_MESSAGE, @"「攻撃するのはいいけど、ヤケドに気をつけないと」\n"
-			CALL KOJO_1_0_ADD_MESSAGE, @"「ひゃっはー！　汚物は消毒だー！……一度言ってみたかったんですよね」\n"
+			CALL KOJO_1_0_ADD_MESSAGE, @"「おぶつはしょうどくだー！」\n"
 		ENDSELECT
 	ENDSELECT
 RETURN 1
