@@ -8,28 +8,28 @@
 	; 今のところ処女時口上のみ、それ以外は帰る(再生処女も帰る)
 	SIF TALENT:0 != 1
 		RETURN 0
-	
+
 	; 喪失中
 	IF CFLAG:29
-		CALL KOJO_1_0_ADD_MESSAGE, @"「ここ……　だけは……　まもらな…きゃ……」\n"
-		
+		CALL KOJO_1_0_ADD_MESSAGE, @"「だめ……　ここはだめ……」\n"
+
 		; 催眠中(無意識・認識操作系) 追加口上
 		IF KOJO_1_0_IS_HYPNO() && FLAG:526 == 2
 			CALL KOJO_1_0_ADD_MESSAGE, @"\m\g正常な認識を狂わされた%CALLNAME:TARGET%は自ら秘肉を割り開き、守るべき処女の証を見せつけた…\g\n"
 		ENDIF
 		RETURN 1
 	ENDIF
-	
+
 	; 催眠中
 	IF KOJO_1_0_IS_HYPNO()
 		; 催眠種類で分岐
 		SELECTCASE FLAG:526
 		; 拘束・肉体操作系
 		CASE 0
-			
+
 		; 発情・感情操作系
 		CASE 1
-			
+
 		; 無意識・認識操作系
 		CASE 2
 			RETURN 0
@@ -39,12 +39,12 @@
 	; 通常時
 	SELECTCASE KOJO_1_KOJO_MODE
 	CASE "淫乱"
-		CALL KOJO_1_0_ADD_MESSAGE, @"「わたしのはじめてを奪うにはちょ～っと力不足ですよー」\n"
-		CALL KOJO_1_0_ADD_MESSAGE, @"「ふふん、わたしの処女は高いですよぉ♥」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「はじめてがこんな♥　ぜったいだめ♥」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「むりやりなんて♥♥　だめ♥♥♥」\n"
 	CASE "発情"
-		CALL KOJO_1_0_ADD_MESSAGE, @"「ココだけは…　絶対にダメ…」\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「すごくぬれてるけど……　それはだめ……」\n"
 	CASEELSE
-		CALL KOJO_1_0_ADD_MESSAGE, @"（処女だけは何とかして守らないと！）\n"
-		CALL KOJO_1_0_ADD_MESSAGE, @"（こんな奴に、わたしのはじめて…　奪われたりするもんですか！）\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"（にんしんだけはさけないと）\n"
+		CALL KOJO_1_0_ADD_MESSAGE, @"「やーめーてー！」\n"
 	ENDSELECT
 RETURN 1
