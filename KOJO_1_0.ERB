@@ -606,20 +606,20 @@ RETURN VALUE
 				; 睡眠中
 				IF CFLAG:25
 					{
-					CALL KOJO_1_0_ADD_MESSAGE, @"「あっ……　あっ……　あﾞあﾞぁﾞっ……！！\n
-					                              　んひ……いぃぎぃぎいいぃぃぃ……っ！！　あがあぁぁ……っっッッッ……！！！」\w
+					CALL KOJO_1_0_ADD_MESSAGE, @"「あっ♥♥　うああああっ！！！\n
+					                              　んぐ、ううぅうぅぅううう！！！」\w
 					                              \d%CALLNAME:TARGET%は一際大きく身を震わせると、そのまま脱力した……\d\w
 					                              \b眠ったままの%CALLNAME:TARGET%は、意識も出来ぬ間に理性を完全に破壊された！\b\w"
 					}
 					CALL KOJO_1_0_PARAGRAPH_MESSAGE
 
-					CALL KOJO_1_0_ADD_MESSAGE, @"「おﾞッ……♥　おﾞぉッ……ッ♥♥　おﾞおﾞぉﾞ～～ッッ……♥♥♥」\w"
+					CALL KOJO_1_0_ADD_MESSAGE, @"「あ゛……♥♥♥　ゔ……♥♥♥」\w"
 					CALL KOJO_1_0_PARAGRAPH_MESSAGE
 
 					CALL KOJO_1_0_ADD_MESSAGE, @"\d%CALLNAME:TARGET%は弛緩した膀胱から尿を垂れ流し、無意識のまま腰を振りたくっている……\d\w"
 					CALL KOJO_1_0_PARAGRAPH_MESSAGE
 
-					CALL KOJO_1_0_ADD_MESSAGE, @"「へひぃ……っ♥　はへぇ……ぇっ……♥♥」\w"
+					CALL KOJO_1_0_ADD_MESSAGE, @"「んひ♥♥♥　うあ♥♥♥♥」\w"
 					CALL KOJO_1_0_PARAGRAPH_MESSAGE
 
 					CALL KOJO_1_0_ADD_MESSAGE, @"\d目を覚ます頃には性欲に支配された哀れな存在へと成り果てているだろう……\d\w"
@@ -627,101 +627,124 @@ RETURN VALUE
 
 				; 催眠中
 				ELSEIF KOJO_1_0_IS_HYPNO()
-					; 催眠種類で分岐
-					SELECTCASE FLAG:526
+					; 催眠種類で分岐　‥‥‥はめんどくさいから共通にしちゃいました 途中まで書いたけど
+					{
+					CALL KOJO_1_0_ADD_MESSAGE, @"「あっ♥　あっあっ♥♥♥　きもちくなっちゃうのが♥♥♥\n
+					                              　よーちえんじに♥♥♥　こんなの♥♥♥　まだ♥♥♥♥　っっっ～～～～♥♥♥♥」\w
+					                              \d%CALLNAME:TARGET%は一際大きく身を震わせると、そのまま脱力した……\d\w"
+
+					}
+					CALL KOJO_1_0_PARAGRAPH_MESSAGE
+
+					CALL KOJO_1_0_ADD_MESSAGE, @"\b%CALLNAME:TARGET%の思考を狂わせていた催眠の力が、遂に最後の理性を焼き尽くした！\b\w"
+					CALL KOJO_1_0_ADD_MESSAGE, @"\b正常な思考を奪われたまま、%CALLNAME:TARGET%の理性は完全に破壊された！\nイキ狂う事を悦びとする、淫らな生き物としての記憶が定着してしまった……\b\w"
+
+					CALL KOJO_1_0_PARAGRAPH_MESSAGE
+
+					CALL KOJO_1_0_ADD_MESSAGE, @"「そっかぁ♥♥♥　こっちがほんとのアイちゃんだったんだ♥♥♥」\w"
+					CALL KOJO_1_0_PARAGRAPH_MESSAGE
+
+					CALL KOJO_1_0_ADD_MESSAGE, @"\d思考を交尾の快感に埋め尽くされた姿は、最早色狂いの幼女でしかなかった……\d\w"
+					CALL KOJO_1_0_PARAGRAPH_MESSAGE
+
+					CALL KOJO_1_0_ADD_MESSAGE, @"「えっちなあそび♥♥♥　もっとアイちゃんにおしえて♥♥♥♥♥」\w"
+					CALL KOJO_1_0_PARAGRAPH_MESSAGE
+
+					CALL KOJO_1_0_ADD_MESSAGE, @"\d%CALLNAME:TARGET%は次の相手を見定めると、淫らな表情で舌なめずりをした……\d\w"
+
+					;SELECTCASE FLAG:526
 					; 拘束・肉体操作系
-					CASE 0
-						{
-						CALL KOJO_1_0_ADD_MESSAGE, @"「身体の自由、返してよぉっ！　操るのやめてよぉっ！\n
-						                              　もうだめ……　もうだめ……　もう限界っ！　気持ちいいのいらないっ！\n
-						                              　これ以上は嫌！　嫌なの！　狂っちゃうからっ！　本当に狂っちゃ――」\w
-						                              \d%CALLNAME:TARGET%は一際大きく身を震わせると、そのまま脱力した……\d\w
-						                              \b催眠の力で操られ快感を受け続けた%CALLNAME:TARGET%は、本能に逆らうことが出来なくなった！\b\w"
-						}
-						CALL KOJO_1_0_PARAGRAPH_MESSAGE
+					;CASE 0
+					;	{
+					;	CALL KOJO_1_0_ADD_MESSAGE, @"「だめだめ♥♥　むりやりさせられてるだけなの♥♥♥\n
+					;	                              　きもちいのもうやだ♥♥♥　あ゛っ♥♥♥」\w
+					;	                              \d%CALLNAME:TARGET%は一際大きく身を震わせると、そのまま脱力した……\d\w
+					;	                              \b催眠の力で操られ快感を受け続けた%CALLNAME:TARGET%は、本能に逆らうことが出来なくなった！\b\w"
+					;	}
+					;	CALL KOJO_1_0_PARAGRAPH_MESSAGE
 
-						CALL KOJO_1_0_ADD_MESSAGE, @"「ヒドイ♥　ヒドイよぉ♥　わたしは、こんなエッチになりたくなかったのにぃ♥♥」\w"
-						CALL KOJO_1_0_PARAGRAPH_MESSAGE
+					;	CALL KOJO_1_0_ADD_MESSAGE, @"「アイちゃんまだよーちえんじなのに♥♥♥　こんなことさせられて♥♥♥♥」\w"
+					;	CALL KOJO_1_0_PARAGRAPH_MESSAGE
 
-						CALL KOJO_1_0_ADD_MESSAGE, @"\d頭の芯まで性欲に支配された%CALLNAME:TARGET%は、涙と涎まみれの顔で淫らな笑みを浮かべている……\d\w"
-						CALL KOJO_1_0_PARAGRAPH_MESSAGE
+					;	CALL KOJO_1_0_ADD_MESSAGE, @"\d頭の芯まで性欲に支配された%CALLNAME:TARGET%は、涙と涎まみれの顔で淫らな笑みを浮かべている……\d\w"
+					;	CALL KOJO_1_0_PARAGRAPH_MESSAGE
 
-						CALL KOJO_1_0_ADD_MESSAGE, @"「おなかの中ジンジンするぅ♥　交尾したい……♥　セックスしたいよぉ……♥♥」\w"
-						CALL KOJO_1_0_PARAGRAPH_MESSAGE
+					;	CALL KOJO_1_0_ADD_MESSAGE, @"「もういいよね……♥♥♥♥　アイちゃんのしきゅー、しょくしゅさんにあげても……♥♥♥♥」\w"
+					;	CALL KOJO_1_0_PARAGRAPH_MESSAGE
 
-						CALL KOJO_1_0_ADD_MESSAGE, @"\d%CALLNAME:TARGET%は尽きる事のない肉欲に飲み込まれた……\d\w"
+					;	CALL KOJO_1_0_ADD_MESSAGE, @"\d%CALLNAME:TARGET%は尽きる事のない肉欲に飲み込まれた……\d\w"
 
 					; 発情・感情操作系
-					CASE 1
-						{
-						CALL KOJO_1_0_ADD_MESSAGE, @"「これっ、この感じっ♥　この先行ったら戻れないの、わかるっ♥\n
-						                              　でも止まんないっ♥　イクだけのバカになるっ♥♥　壊れちゃう♥♥♥　わたし壊れ――」\w
-						                              \d%CALLNAME:TARGET%は一際大きく身を震わせると、そのまま脱力した……\d\w"
+					;CASE 1
+					;	{
+					;	CALL KOJO_1_0_ADD_MESSAGE, @"「あっ♥　あっあっ♥♥♥　きもちくなっちゃうのが♥♥♥\n
+					;	                              　よーちえんじに♥♥♥　こんなの♥♥♥　まだ♥♥♥♥　っっっ～～～～♥♥♥♥」\w
+					;	                              \d%CALLNAME:TARGET%は一際大きく身を震わせると、そのまま脱力した……\d\w"
 
-						}
-						CALL KOJO_1_0_PARAGRAPH_MESSAGE
+					;	}
+					;	CALL KOJO_1_0_PARAGRAPH_MESSAGE
 
-						CALL KOJO_1_0_ADD_MESSAGE, @"\b%CALLNAME:TARGET%の思考を狂わせていた催眠の力が、遂に最後の理性を焼き尽くした！\b\w"
-						CALL KOJO_1_0_ADD_MESSAGE, @"\b正常な思考を奪われたまま、%CALLNAME:TARGET%の理性は完全に破壊された！\nイキ狂う事を悦びとする、淫らな生き物としての記憶が定着してしまった……\b\w"
+					;	CALL KOJO_1_0_ADD_MESSAGE, @"\b%CALLNAME:TARGET%の思考を狂わせていた催眠の力が、遂に最後の理性を焼き尽くした！\b\w"
+					;	CALL KOJO_1_0_ADD_MESSAGE, @"\b正常な思考を奪われたまま、%CALLNAME:TARGET%の理性は完全に破壊された！\nイキ狂う事を悦びとする、淫らな生き物としての記憶が定着してしまった……\b\w"
 
-						CALL KOJO_1_0_PARAGRAPH_MESSAGE
+					;	CALL KOJO_1_0_PARAGRAPH_MESSAGE
 
-						CALL KOJO_1_0_ADD_MESSAGE, @"「えへへ……ぇ♥　セックスだけ出来れば、もう他に何もいらないよぉ♥」\w"
-						CALL KOJO_1_0_PARAGRAPH_MESSAGE
+					;	CALL KOJO_1_0_ADD_MESSAGE, @"「そっかぁ♥♥♥　こっちがほんとのアイちゃんだったんだ♥♥♥」\w"
+					;	CALL KOJO_1_0_PARAGRAPH_MESSAGE
 
-						CALL KOJO_1_0_ADD_MESSAGE, @"\d思考を交尾の快感に埋め尽くされた姿は、最早色狂いの幼女でしかなかった……\d\w"
-						CALL KOJO_1_0_PARAGRAPH_MESSAGE
+					;	CALL KOJO_1_0_ADD_MESSAGE, @"\d思考を交尾の快感に埋め尽くされた姿は、最早色狂いの幼女でしかなかった……\d\w"
+					;	CALL KOJO_1_0_PARAGRAPH_MESSAGE
 
-						CALL KOJO_1_0_ADD_MESSAGE, @"「もっと気持ちいいの欲しいの、一緒に遊ぼう♥」\w"
-						CALL KOJO_1_0_PARAGRAPH_MESSAGE
+					;	CALL KOJO_1_0_ADD_MESSAGE, @"「えっちなあそび♥♥♥　もっとアイちゃんにおしえて♥♥♥♥♥」\w"
+					;	CALL KOJO_1_0_PARAGRAPH_MESSAGE
 
-						CALL KOJO_1_0_ADD_MESSAGE, @"\d%CALLNAME:TARGET%は次の相手を見定めると、淫らな表情で舌なめずりをした……\d\w"
+					;	CALL KOJO_1_0_ADD_MESSAGE, @"\d%CALLNAME:TARGET%は次の相手を見定めると、淫らな表情で舌なめずりをした……\d\w"
 
 					; 無意識・認識操作系
-					CASE 2
-						{
-						CALL KOJO_1_0_ADD_MESSAGE, @"「もう限界……です……\n
-						                              　これ以上続けると……　わたしの頭は、おかしくなって……　本当の肉便器に堕ちます……\n
-						                              　どうぞ、望むまま……　犯しつづけて……ください……　わたしは……どうなっても……いい――」\w
-						                              \d%CALLNAME:TARGET%は一際大きく身を震わせると、そのまま脱力した…\d\w
-						                              \b催眠の力で性欲の捌け口として使われたまま、%CALLNAME:TARGET%の理性は焼き切られた！\b\w"
-						}
-						CALL KOJO_1_0_PARAGRAPH_MESSAGE
+					;CASE 2
+					;	{
+					;	CALL KOJO_1_0_ADD_MESSAGE, @"「もう限界……です……\n
+					;	                              　これ以上続けると……　わたしの頭は、おかしくなって……　本当の肉便器に堕ちます……\n
+					;	                              　どうぞ、望むまま……　犯しつづけて……ください……　わたしは……どうなっても……いい――」\w
+					;	                              \d%CALLNAME:TARGET%は一際大きく身を震わせると、そのまま脱力した…\d\w
+					;	                              \b催眠の力で性欲の捌け口として使われたまま、%CALLNAME:TARGET%の理性は焼き切られた！\b\w"
+					;	}
+					;	CALL KOJO_1_0_PARAGRAPH_MESSAGE
 
-						CALL KOJO_1_0_ADD_MESSAGE, @"「はぁ……ぁ……♥　ぁ……ぁ……♥♥」\w"
-						CALL KOJO_1_0_PARAGRAPH_MESSAGE
+					;	CALL KOJO_1_0_ADD_MESSAGE, @"「はぁ……ぁ……♥　ぁ……ぁ……♥♥」\w"
+					;	CALL KOJO_1_0_PARAGRAPH_MESSAGE
 
-						CALL KOJO_1_0_ADD_MESSAGE, @"\d催眠の力で従っていた時とは違い、%CALLNAME:TARGET%は心からの言葉で奉仕を願い出た……\d\w"
-						CALL KOJO_1_0_PARAGRAPH_MESSAGE
+					;	CALL KOJO_1_0_ADD_MESSAGE, @"\d催眠の力で従っていた時とは違い、%CALLNAME:TARGET%は心からの言葉で奉仕を願い出た……\d\w"
+					;	CALL KOJO_1_0_PARAGRAPH_MESSAGE
 
-						CALL KOJO_1_0_ADD_MESSAGE, @"「えへ……♥　えへへぇ……♥♥　わたし、本物のおちんぽトイレぇ……♥♥」\w"
-						CALL KOJO_1_0_ADD_MESSAGE, @"「さあ続けましょう♥　今までよりもっと気持ちよくなってください♥♥」\w"
-						CALL KOJO_1_0_PARAGRAPH_MESSAGE
+					;	CALL KOJO_1_0_ADD_MESSAGE, @"「えへ……♥　えへへぇ……♥♥　わたし、本物のおちんぽトイレぇ……♥♥」\w"
+					;	CALL KOJO_1_0_ADD_MESSAGE, @"「さあ続けましょう♥　今までよりもっと気持ちよくなってください♥♥」\w"
+					;	CALL KOJO_1_0_PARAGRAPH_MESSAGE
 
-						CALL KOJO_1_0_ADD_MESSAGE, @"\d%CALLNAME:TARGET%の脳は無意識のうちに破壊され、性欲に忠実な一匹の雌へ堕とされた……\d\w"
-					ENDSELECT
+					;	CALL KOJO_1_0_ADD_MESSAGE, @"\d%CALLNAME:TARGET%の脳は無意識のうちに破壊され、性欲に忠実な一匹の雌へ堕とされた……\d\w"
+					;ENDSELECT
 
 				; 喪失中
 				ELSEIF CFLAG:29
 					{
-					CALL KOJO_1_0_ADD_MESSAGE, @"「うあ……ぁぁ……　もう……やだ……　やだよぉ……ぉおおぉ……っ！！\n
-					                              　もうムリ……　こんなのムリいぃっ……！！　全部ムリいいぃぃぃ…………ッ！！」\w
+					CALL KOJO_1_0_ADD_MESSAGE, @"「あ゛ー……♥　お゛っ♥♥♥♥\n
+					                              　あっあっあっ♥♥♥　んゔーーーーっっ♥♥♥♥」\w
 					                              \d%CALLNAME:TARGET%は一際大きく身を震わせると、そのまま脱力した……\d\w
 					                              \b限界を超えた痛みや恐怖によって、%CALLNAME:TARGET%の理性は完全に破壊された！\b\w"
 					}
 					CALL KOJO_1_0_PARAGRAPH_MESSAGE
 					{
-					CALL KOJO_1_0_ADD_MESSAGE, @"（そっか……\n
-					                              　所詮メスなんて……オスを悦ばせるだけの存在なんだ……♥♥\n
-					                              　おちんぽ様に媚びて……交尾漬けにされるだけでいいんだ……♥♥）\w"
+					CALL KOJO_1_0_ADD_MESSAGE, @"（いたいのはいや……　でも……\n
+					                              　よーちえんじのからだをすきにたべてもらうのは……♥\n
+					                              　きもちいい♥♥♥）\w"
 					}
 					CALL KOJO_1_0_PARAGRAPH_MESSAGE
 
 					CALL KOJO_1_0_ADD_MESSAGE, @"\d童子のような快活な光を湛えた%CALLNAME:TARGET%の瞳が、暗く濁っていく……\d\w"
 					CALL KOJO_1_0_PARAGRAPH_MESSAGE
 
-					CALL KOJO_1_0_ADD_MESSAGE, @"（ばいばい、今までのわたし……♥♥）\w"
-					CALL KOJO_1_0_ADD_MESSAGE, @"「もう……♥　好きにして……♥♥」\w"
+					CALL KOJO_1_0_ADD_MESSAGE, @"（きっと、ほんとうのアイちゃんは、めすいぬだったんだ♥）\w"
+					CALL KOJO_1_0_ADD_MESSAGE, @"「もっと……♥♥♥　おねがいします……♥♥♥　せーし、ください……♥♥♥♥」\w"
 					CALL KOJO_1_0_PARAGRAPH_MESSAGE
 
 					CALL KOJO_1_0_ADD_MESSAGE, @"\d逆らわなければ痛い思いをしなくていい……\n%CALLNAME:TARGET%は抵抗の無意味さを悟り、性欲処理の便器として生きる幸せを受け入れた……\d\w"
@@ -729,23 +752,23 @@ RETURN VALUE
 				; 通常時
 				ELSE
 					{
-					CALL KOJO_1_0_ADD_MESSAGE, @"「もうだめ……　もうだめ……　もう限界……　こんなのムリぃ……！　ムリだよぉっ……！！\n
-					                              　うあﾞあﾞぁぁぁっ！？　おがじぐなるぅっ！？　やだあぁっっっ！　狂っちゃうっ！　狂っちゃ――」\w
+					CALL KOJO_1_0_ADD_MESSAGE, @"「きもちい♥♥♥　きもちよすぎて♥♥♥　へんになる♥♥♥\n
+					                              　しきゅーに♥♥　よーちえんじのちっちゃいしきゅーにください♥♥♥♥　～～～っっ♥♥♥♥」\w
 					                              \d%CALLNAME:TARGET%は一際大きく身を震わせると、そのまま脱力した……\d\w
 					                              \b気が狂うような快感に晒され続けた%CALLNAME:TARGET%の理性は、ついに焼ききれてしまった！\b\w"
 					}
 					CALL KOJO_1_0_PARAGRAPH_MESSAGE
 
-					CALL KOJO_1_0_ADD_MESSAGE, @"「やっとわかった……ぁ♥♥\n　そっか……ぁ……♥　おちんぽの奴隷になるのって……幸せなんだぁ………♥♥」\w"
-					CALL KOJO_1_0_ADD_MESSAGE, @"「あははぁ……♥　わたしぃ……こわれちゃったぁ……♥　ヘンタイさんにされちゃったぁ……♥」\w"
+					CALL KOJO_1_0_ADD_MESSAGE, @"「アイちゃん……　ほんとうはしょくしゅのおよめさんだったんだ……♥♥♥」\w"
+					CALL KOJO_1_0_ADD_MESSAGE, @"「もっと……♥♥　もっとすきにしてほしい……♥♥♥」\w"
 					CALL KOJO_1_0_PARAGRAPH_MESSAGE
 
 					CALL KOJO_1_0_ADD_MESSAGE, @"\d頭の芯まで性欲に支配された%CALLNAME:TARGET%は、涙と涎まみれの顔で淫らな笑みを浮かべている……\d\w"
 					CALL KOJO_1_0_PARAGRAPH_MESSAGE
 
-					CALL KOJO_1_0_ADD_MESSAGE, @"「えへへぇ……♥　おまんこセックス大好きぃ♥♥」\w"
-					CALL KOJO_1_0_ADD_MESSAGE, @"「交尾したい……♥　交尾したいよぉ……♥♥」\w"
-					CALL KOJO_1_0_ADD_MESSAGE, @"「もう……　ガマン……しない……♥」\w"
+					CALL KOJO_1_0_ADD_MESSAGE, @"「おまんまんも♥♥♥　ちくびも♥♥♥　おしりのあなも……♥♥♥♥」\w"
+					CALL KOJO_1_0_ADD_MESSAGE, @"「アイちゃんのものじゃなくてしょくしゅさんの……♥♥♥♥」\w"
+					CALL KOJO_1_0_ADD_MESSAGE, @"「たくさん♥♥♥　もうがまんしなくていい……♥♥♥♥」\w"
 					CALL KOJO_1_0_PARAGRAPH_MESSAGE
 
 					CALL KOJO_1_0_ADD_MESSAGE, @"\d%CALLNAME:TARGET%は尽きる事のない肉欲に飲み込まれた……\d\w"
@@ -785,7 +808,7 @@ RETURN VALUE
 						CALL KOJO_1_0_ADD_MESSAGE, @"\b操られた身体で快感を得る%CALLNAME:TARGET%は、嫌悪感が薄れてきた事に気付き愕然とした……\b\n"
 					; 発情・感情操作系
 					CASE 1
-						CALL KOJO_1_0_ADD_MESSAGE, @"\b催眠術の力がじわじわと身体を冒し、きりたんの顔は発情した雌そのものになってきた……\b\n"
+						CALL KOJO_1_0_ADD_MESSAGE, @"\b催眠術の力がじわじわと身体を冒し、%CALLNAME:TARGET%の顔は発情した雌そのものになってきた……\b\n"
 					; 無意識・認識操作系
 					CASE 2
 						CALL KOJO_1_0_ADD_MESSAGE, @"\b催眠術で思考を操られた%CALLNAME:TARGET%は、性欲処理用の肉穴になれる事が本気で幸せだと感じ始めた……\b\n"
@@ -850,9 +873,9 @@ RETURN 1
 			CALL KOJO_1_0_PARAGRAPH_MESSAGE
 			SELECTCASE KOJO_1_KOJO_MODE
 			CASE "淫乱"
-				CALL KOJO_1_0_ADD_MESSAGE, @"「あれ？　お人形遊びはもうおしまいですか？」\n"
+				CALL KOJO_1_0_ADD_MESSAGE, @"「なあんだ、もうおわっちゃった♥♥」\n"
 			CASEELSE
-				CALL KOJO_1_0_ADD_MESSAGE, @"「やっと身体がちゃんと動くようになりました…」\n"
+				CALL KOJO_1_0_ADD_MESSAGE, @"「うごける！」\n"
 			ENDSELECT
 
 		; 発情・感情操作系
@@ -861,11 +884,11 @@ RETURN 1
 			CALL KOJO_1_0_PARAGRAPH_MESSAGE
 			SELECTCASE KOJO_1_KOJO_MODE
 			CASE "淫乱"
-				CALL KOJO_1_0_ADD_MESSAGE, @"「えっちになる魔法がとけたって何も変わらないんですけどねぇ♥」\n"
+				CALL KOJO_1_0_ADD_MESSAGE, @"「きもちいのおわっちゃった……♥♥」\n"
 			CASE "発情"
-				CALL KOJO_1_0_ADD_MESSAGE, @"「や、やだ…！？　わたし…何やって…！？」\n"
+				CALL KOJO_1_0_ADD_MESSAGE, @"「あっ♥　なんであんなこと……っ♥」\n"
 			CASEELSE
-				CALL KOJO_1_0_ADD_MESSAGE, @"「はっ…！？　わたし…何を…！？」\n"
+				CALL KOJO_1_0_ADD_MESSAGE, @"「はっ！　なんであんなこと……っ！」\n"
 			ENDSELECT
 
 		; 無意識・認識操作系
@@ -875,9 +898,9 @@ RETURN 1
 
 			SELECTCASE KOJO_1_KOJO_MODE
 			CASE "淫乱"
-				CALL KOJO_1_0_ADD_MESSAGE, @"「んもう♥　ヘンな魔法使わなくたって肉便器くらいやってあげるのにぃ♥」\n"
+				CALL KOJO_1_0_ADD_MESSAGE, @"「あっ♥♥♥　またしょくしゅさんにすきにいじられて……♥♥♥♥」\n"
 			CASEELSE
-				CALL KOJO_1_0_ADD_MESSAGE, @"「ぐうぅっ…っ！　よくもヘンな事してくれましたねえぇぇ！」\n"
+				CALL KOJO_1_0_ADD_MESSAGE, @"「あれっ！？　ゆ、ゆるさん！！」\n"
 			ENDSELECT
 		ENDSELECT
 		CALL KOJO_1_0_PARAGRAPH_MESSAGE
